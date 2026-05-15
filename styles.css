@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #f9fafb;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #facc15;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container,
+#home {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #facc15;
+}
+
+button {
+  background: #facc15;
+  color: #111827;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #eab308;
+  transform: translateY(-1px);
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stats div {
+  flex: 1;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 18px;
+}
+
+#busca {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#listaAnotacoes {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-left: 5px solid #facc15;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.card p {
+  color: #d1d5db;
+  margin-bottom: 14px;
+}
+
+.card button {
+  background: #ef4444;
+  color: #fff;
+}
+
+.card button:hover {
+  background: #dc2626;
+}
+
+#erro {
+  color: #f87171;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#slideshow {
+  text-align: center;
+}
+
+#slide {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #facc15;
+  background: #1f2937;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}

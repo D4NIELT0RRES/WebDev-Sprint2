@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StudyCam</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -13,27 +15,84 @@
 
   <main id="app">
 
+    <!-- LOGIN -->
+    <section class="container">
+      <h2>Login</h2>
+
+      <form id="formLogin">
+        <input
+          type="text"
+          id="user"
+          placeholder="Usuário"
+        />
+
+        <input
+          type="password"
+          id="senha"
+          placeholder="Senha"
+        />
+
+        <button type="submit">
+          Login
+        </button>
+
+        <p id="erro"></p>
+      </form>
+    </section>
+
     <!-- HOME -->
-    <section id="home">
+    <section id="home" class="container">
       <h2>Dashboard</h2>
 
       <div class="stats">
-        <div>Fotos: <span id="totalFotos">0</span></div>
-        <div>Matérias: <span id="totalMaterias">0</span></div>
+        <div>
+          Fotos:
+          <span id="totalFotos">0</span>
+        </div>
+
+        <div>
+          Matérias:
+          <span id="totalMaterias">0</span>
+        </div>
       </div>
+
+      <!-- BUSCA -->
+      <input
+        type="text"
+        id="busca"
+        placeholder="Buscar anotação..."
+      />
 
       <div id="listaAnotacoes"></div>
 
-      <button id="btnCapturar">Capturar Anotação</button>
+      <button id="btnCapturar">
+        Capturar Anotação
+      </button>
     </section>
-  <input type="text" id="busca" placeholder="Buscar...">
 
-    <div id="slideshow">
-      <img id="slide" src="img1.jpg" width="200">
-      <br>
-      <button onclick="anterior()">Anterior</button>
-      <button onclick="proximo()">Próximo</button>
-    </div>
+    <!-- SLIDESHOW -->
+    <section class="container">
+      <h2>Slideshow</h2>
+
+      <div id="slideshow">
+        <img
+          id="slide"
+          src="./images/img1.png"
+          alt="Imagem do slideshow"
+          width="250"
+        />
+
+        <br><br>
+
+        <button onclick="anterior()">
+          Anterior
+        </button>
+
+        <button onclick="proximo()">
+          Próximo
+        </button>
+      </div>
+    </section>
 
   </main>
 
