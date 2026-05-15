@@ -24,3 +24,17 @@ function renderizar() {
     lista.appendChild(div);
   });
 }
+const busca = document.getElementById("busca");
+busca.addEventListener("input", () => {
+  const valor = busca.value.toLowerCase();
+  const filtrado = anotacoes.filter(item =>
+    item.titulo.toLowerCase().includes(valor)
+  );
+  lista.innerHTML = "";
+  filtrado.forEach(item => {
+    const div = document.createElement("div");
+    div.classList.add("card");
+    div.innerHTML = <h3>${item.titulo}</h3>;
+    lista.appendChild(div);
+  });
+});
