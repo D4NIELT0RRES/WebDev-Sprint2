@@ -12,3 +12,15 @@ btn.addEventListener("click", () => {
     renderizar();
   }
 });
+function renderizar() {
+  lista.innerHTML = "";
+  anotacoes.forEach((item) => {
+    const div = document.createElement("div");
+    div.classList.add("card");
+    div.innerHTML = `
+      <h3>${item.titulo}</h3>
+      <p>${item.categoria}</p>
+    `;
+    lista.appendChild(div);
+  });
+}
